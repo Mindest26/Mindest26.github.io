@@ -1,0 +1,229 @@
+$brandColorOne: #0f3d3e;
+$brandColorTwo: #121212;
+$brandColorThree: #469d7c;
+
+html {
+  height: 100%;
+}
+
+header h1 {
+  font-size: 2.5em;
+  color: $brandColorThree;
+}
+
+h1,
+// h2,
+h3 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  background: whitesmoke;
+  color: $brandColorTwo;
+
+  margin: 0;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+}
+
+#page-navigation {
+  background: rgb(30, 34, 30);
+}
+// #page-navigation {
+//   *,
+//   *::before,
+//   *::after {
+//     box-sizing: border-box;
+//     padding: 0;
+//     margin: 0;
+//   }
+// }
+:root {
+  --black: $brandColorTwo;
+  --white: #fafafaa4;
+  --serif: "Playfair Display", serif;
+  --ease: cubic-bezier(0.62, 0.05, 0.01, 0.99);
+  background-color: var(--black);
+  font-family: var(--serif);
+}
+.wrapper {
+  // width: 80vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2rem);
+}
+.wrapper a {
+  position: relative;
+  color: var(--white);
+  font-size: clamp(0.5rem, 1.67vw, 1.33rem);
+  text-decoration: none;
+
+  padding-bottom: 0.07em;
+  width: max-content;
+  line-height: 1;
+
+  span {
+    display: inline-block;
+    white-space: nowrap;
+    transition: all 350ms ease-out;
+    transform-origin: center center;
+    transform-style: preserve-3d;
+  }
+
+  .primary {
+    position: relative;
+  }
+
+  .secondary {
+    position: absolute;
+    transform: translateY(0.5em) rotateX(90deg);
+    left: 0;
+  }
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 0.075em;
+    background-color: $brandColorOne;
+    position: absolute;
+    bottom: 0em;
+    transform: scaleX(0);
+    transition: all 350ms ease-out;
+    transform-origin: left center;
+  }
+
+  &:hover {
+    .primary {
+      transform: translateY(-0.5em) rotateX(90deg);
+    }
+    .secondary {
+      transform: translateY(0em);
+    }
+
+    &::before {
+      transform: scaleX(1);
+      transition-delay: 200ms;
+    }
+  }
+}
+
+header {
+  background: $brandColorOne;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 960px;
+}
+
+#info {
+  padding: 20px;
+  margin: auto;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+main h3 {
+  text-align: center;
+}
+
+p,
+li {
+  font-size: 14px;
+  // font-size: 14px;
+  line-height: 1.3em;
+}
+
+footer {
+  padding: 20px 0;
+  margin-top: 30px;
+  background: $brandColorOne;
+  color: $brandColorThree;
+}
+
+.icon {
+  width: 20px;
+  margin-right: 10px;
+  float: left;
+}
+
+svg {
+  margin: 5px;
+  transition: all ease 1.5s;
+}
+
+#svgInstagram {
+  fill: #ff1d26;
+}
+
+#svgTelegram {
+  fill: #22a8e7;
+}
+
+#svgYouTube {
+  fill: #ff0033;
+}
+
+#svgInstagram,
+#svgTelegram,
+#svgYouTube {
+  &:hover {
+    fill: #000;
+  }
+}
+
+@media (max-width: 960px) {
+  .wrapper {
+    // width: 49.99vw;
+    a {
+      font-size: clamp(0.75rem, 2.51vw, 1.99rem);
+    }
+  }
+  .container {
+    width: 90%;
+  }
+  header h1 {
+    font-size: 2em;
+  }
+  main h3 {
+    font-size: 25px;
+  }
+  p,
+  li {
+    font-size: 20px;
+  }
+  .wrapper {
+    height: 6vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    // width: 66.66vw;
+    a {
+      font-size: clamp(1.5rem, 3.34vw, 2.66rem);
+    }
+  }
+  footer {
+    padding: 15px 0;
+  }
+  #info {
+    padding: 15px;
+  }
+  header h1 {
+    font-size: 1.5em;
+  }
+}

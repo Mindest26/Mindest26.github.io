@@ -1,0 +1,228 @@
+html {
+  height: 100%;
+}
+
+header h1 {
+  font-size: 2.5em;
+  color: #469d7c;
+}
+
+h1,
+h3 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  background: whitesmoke;
+  color: #121212;
+  margin: 0;
+  min-height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto 1fr auto;
+      grid-template-rows: auto auto 1fr auto;
+}
+
+#page-navigation {
+  background: #1e221e;
+}
+
+:root {
+  --black: $brandColorTwo;
+  --white: #fafafaa4;
+  --serif: "Playfair Display", serif;
+  --ease: cubic-bezier(0.62, 0.05, 0.01, 0.99);
+  background-color: var(--black);
+  font-family: var(--serif);
+}
+
+.wrapper {
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: clamp(1rem, 3vw, 2rem);
+}
+
+.wrapper a {
+  position: relative;
+  color: var(--white);
+  font-size: clamp(0.5rem, 1.67vw, 1.33rem);
+  text-decoration: none;
+  padding-bottom: 0.07em;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  line-height: 1;
+}
+
+.wrapper a span {
+  display: inline-block;
+  white-space: nowrap;
+  -webkit-transition: all 350ms ease-out;
+  transition: all 350ms ease-out;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.wrapper a .primary {
+  position: relative;
+}
+
+.wrapper a .secondary {
+  position: absolute;
+  -webkit-transform: translateY(0.5em) rotateX(90deg);
+          transform: translateY(0.5em) rotateX(90deg);
+  left: 0;
+}
+
+.wrapper a::before {
+  content: "";
+  width: 100%;
+  height: 0.075em;
+  background-color: #0f3d3e;
+  position: absolute;
+  bottom: 0em;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 350ms ease-out;
+  transition: all 350ms ease-out;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+}
+
+.wrapper a:hover .primary {
+  -webkit-transform: translateY(-0.5em) rotateX(90deg);
+          transform: translateY(-0.5em) rotateX(90deg);
+}
+
+.wrapper a:hover .secondary {
+  -webkit-transform: translateY(0em);
+          transform: translateY(0em);
+}
+
+.wrapper a:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transition-delay: 200ms;
+          transition-delay: 200ms;
+}
+
+header {
+  background: #0f3d3e;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 960px;
+}
+
+#info {
+  padding: 20px;
+  margin: auto;
+  max-width: 600px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+main h3 {
+  text-align: center;
+}
+
+p,
+li {
+  font-size: 14px;
+  line-height: 1.3em;
+}
+
+footer {
+  padding: 20px 0;
+  margin-top: 30px;
+  background: #0f3d3e;
+  color: #469d7c;
+}
+
+.icon {
+  width: 20px;
+  margin-right: 10px;
+  float: left;
+}
+
+svg {
+  margin: 5px;
+  -webkit-transition: all ease 1.5s;
+  transition: all ease 1.5s;
+}
+
+#svgInstagram {
+  fill: #ff1d26;
+}
+
+#svgTelegram {
+  fill: #22a8e7;
+}
+
+#svgYouTube {
+  fill: #ff0033;
+}
+
+#svgInstagram:hover,
+#svgTelegram:hover,
+#svgYouTube:hover {
+  fill: #000;
+}
+
+@media (max-width: 960px) {
+  .wrapper a {
+    font-size: clamp(0.75rem, 2.51vw, 1.99rem);
+  }
+  .container {
+    width: 90%;
+  }
+  header h1 {
+    font-size: 2em;
+  }
+  main h3 {
+    font-size: 25px;
+  }
+  p,
+  li {
+    font-size: 20px;
+  }
+  .wrapper {
+    height: 6vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper a {
+    font-size: clamp(1.5rem, 3.34vw, 2.66rem);
+  }
+  footer {
+    padding: 15px 0;
+  }
+  #info {
+    padding: 15px;
+  }
+  header h1 {
+    font-size: 1.5em;
+  }
+}
+/*# sourceMappingURL=style.css.map */
