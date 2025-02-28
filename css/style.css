@@ -134,7 +134,7 @@ main {
 }
 
 #info {
-  padding: 20px;
+  padding: 20px 20px 0 20px;
   margin: auto;
   max-width: 600px;
   border-radius: 10px;
@@ -188,6 +188,80 @@ svg {
 #svgTelegram:hover,
 #svgYouTube:hover {
   fill: #000;
+}
+
+#order-details-container {
+  margin: 20px -20px 0 -20px;
+  position: relative;
+  background: #0f3d3e;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  padding-top: 20px;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  cursor: default;
+}
+
+#odc-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@-webkit-keyframes shadow-pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 35px rgba(255, 255, 255, 0);
+            box-shadow: 0 0 0 35px rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes shadow-pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 35px rgba(255, 255, 255, 0);
+            box-shadow: 0 0 0 35px rgba(255, 255, 255, 0);
+  }
+}
+
+#cta-button {
+  margin-bottom: 20px;
+  padding: 20px 40px;
+  background: #469d7c;
+  border: 0;
+  border-radius: 10px;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: bold;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.05);
+  -webkit-animation: shadow-pulse 1s infinite;
+          animation: shadow-pulse 1s infinite;
+  cursor: pointer;
+}
+
+#cta-button:focus {
+  outline: none;
+}
+
+#cta-text {
+  margin-bottom: 10px;
+  color: var(--white);
+  font-size: 0.95rem;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.18);
 }
 
 @media (max-width: 960px) {
