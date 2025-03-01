@@ -6,19 +6,8 @@ html {
   height: 100%;
 }
 
-header h1 {
-  font-size: 2.5em;
-  color: $brandColorThree;
-}
-
-h1,
-h3 {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-
 body {
-  font-family: "Times New Roman", Times, serif;
+  font-family: sans-serif;
   background: whitesmoke;
   color: $brandColorTwo;
 
@@ -102,11 +91,33 @@ body {
   }
 }
 
+@font-face {
+  font-family: "MADEWaffleSoft";
+  src: url("../fonts/Madewafflesoft/madewafflesoft.eot"); /* IE 9 Compatibility Mode */
+  src: url("../fonts/Madewafflesoft/madewafflesoft.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE < 9 */ url("../fonts/Madewafflesoft/madewafflesoft.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../fonts/Madewafflesoft/madewafflesoft.woff") format("woff"),
+    /* Firefox >= 3.6, any other modern browser */
+      url("../fonts/Madewafflesoft/madewafflesoft.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/Madewafflesoft/madewafflesoft.svg#madewafflesoft")
+      format("svg"); /* Chrome < 4, Legacy iOS */
+}
+
 header {
   background: $brandColorOne;
   color: white;
   padding: 10px 0;
   text-align: center;
+
+  h1 {
+    font-size: 2.5em;
+    color: $brandColorThree;
+    font-family: MADEWaffleSoft;
+  }
 }
 
 main {
@@ -242,11 +253,11 @@ svg {
     font-size: 2em;
   }
   main h3 {
-    font-size: 25px;
+    font-size: 24px;
   }
   p,
   li {
-    font-size: 20px;
+    font-size: 18px;
   }
   .wrapper {
     height: 6vh;
@@ -266,7 +277,7 @@ svg {
     padding: 15px;
   }
   header h1 {
-    font-size: 1.5em;
+    font-size: 1.8em;
   }
 
   #order-details-container {
