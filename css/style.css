@@ -116,6 +116,9 @@ body {
 }
 
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background: #0f3d3e;
   color: white;
   padding: 10px 0;
@@ -132,13 +135,26 @@ main {
   padding: 20px;
 }
 
+#logo {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  width: 53px;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+#logo:hover {
+  width: 56px;
+}
+
 .container {
   margin: 0 auto;
   width: 960px;
 }
 
 #info {
-  padding: 20px 20px 0 20px;
+  padding: 20px 20px 20px 20px;
   margin: auto;
   max-width: 600px;
   border-radius: 10px;
